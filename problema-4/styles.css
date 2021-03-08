@@ -1,0 +1,22 @@
+li[data-value='orange'] {
+  color: orange;
+}
+li[data-value='banana'] {
+  color: rgb(155, 155, 4);
+}
+li[data-value='apple'] {
+  color: red;
+}
+li[data-value='cherry'] {
+  color: rgb(255, 61, 61);
+}
+li[data-value='mango'] {
+  color: rgb(252, 184, 58);
+}
+li[data-value='plum'] {
+  color: purple;
+}
+
+li::after{
+  content: attr(data-value);
+}

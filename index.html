@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquetación para Talent Land - David Portilla</title>
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .post-list {
+      display: grid;
+      grid-template-areas:
+        'aside'
+        'post-list__four'
+        'post-list__three'
+        'post-list__two'
+        'post-list__one'
+      ;
+    }
+
+    header {
+      background-color: red;
+      color: white;
+      height: 75px;
+      width: 100%;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    main {
+      background-color: green;
+      color: white;
+      height: 100vh;
+    }
+
+    aside {
+      background-color: gray;
+      grid-area: aside;
+      height: 300px;
+    }
+
+    aside,
+    .post-list__one,
+    .post-list__two,
+    .post-list__three,
+    .post-list__four {
+      border: 2px solid black;
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    .post-list__one {
+      background-color: red;
+      color: white;
+      grid-area: post-list__one;
+      height: 400px;
+    }
+
+    .post-list__two {
+      background-color: blue;
+      color: white;
+      grid-area: post-list__two;
+      height: 400px;
+    }
+
+    .post-list__three {
+      background-color: green;
+      color: white;
+      grid-area: post-list__three;
+      height: 400px;
+    }
+
+    .post-list__four {
+      background-color: yellow;
+      grid-area: post-list__four;
+      height: 400px;
+    }
+
+    .calltoaction {
+      background-color: green;
+      color: white;
+      height: 300px;
+    }
+
+    footer {
+      background-color: blue;
+      color: white;
+      height: 300px;
+    }
+
+    @media (min-width: 768px) {
+      html {
+        background-color: aqua;
+
+      }
+
+      .post-list {
+        position: static;
+        display: grid;
+        grid-template-areas:
+          'post-list__four aside'
+          'post-list__three aside'
+          'post-list__two aside'
+          'post-list__one aside'
+        ;
+        grid-template-columns: 80% 20%;
+      }
+
+      aside {
+        background-color: grey;
+        grid-area: aside;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>100% x 75px</header>
+    <main>100% x alto ventana</main>
+    <section class="post-list">
+      <aside>100% x 300px</aside>
+      <article class="post-list__one">post 1 100% x al menos 400px de alto</article>
+      <article class="post-list__two">post 2 100% x al menos 400px de alto</article>
+      <article class="post-list__three">post 3 100% x al menos 400px de alto</article>
+      <article class="post-list__four">post 4 100% x al menos 400px de alto</article>
+    </section>
+
+    <section class="calltoaction">100% x 400px</section>
+    <footer>100 % 300px</footer>
+  </div>
+</body>
+
+</html>
